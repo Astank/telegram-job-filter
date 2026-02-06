@@ -1,3 +1,8 @@
+import sys
+import types
+
+# Dummy imghdr for environments missing it
+sys.modules['imghdr'] = types.SimpleNamespace()
 from telethon import TelegramClient, events
 import sqlite3
 import os
